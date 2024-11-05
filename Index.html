@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Places to Visit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="tourism-container">
+        <h1>Top Tourism Destinations</h1>
+        <div class="places-grid">
+            <div class="place-card">
+                <img src="Images/ifeltower.jpg" alt="Eiffel Tower in Paris">
+                <h3>Paris, France</h3>
+                <p>Explore the beauty of the Eiffel Tower, Louvre Museum, and French culture in the heart of Paris.</p>
+            </div>
+            <div class="place-card">
+                <img src="Images/beach.jpg" alt="Beach in Bali">
+                <h3>Bali, Indonesia</h3>
+                <p>Relax on stunning beaches, visit ancient temples, and enjoy the vibrant nightlife of Bali.</p>
+            </div>
+            <div class="place-card">
+                <img src="Images/skyline.jpg" alt="New York City skyline">
+                <h3>New York City, USA</h3>
+                <p>Discover the bustling streets, iconic landmarks, and diverse culture of the Big Apple.</p>
+            </div>
+            <div class="place-card">
+                <img src="Images/kyoto.jpg" alt="Temple in Kyoto">
+                <h3>Kyoto, Japan</h3>
+                <p>Experience traditional Japanese culture with beautiful temples, shrines, and peaceful gardens.</p>
+            </div>
+        </div>
+    </div>
+    <section id="gallery">
+        <h2>Tourism Places Gallery</h2>
+        <div id="tourismImages">
+            <!-- Default Tourism Images will be added here -->
+            <div class="tourism-image" style="background-image: url('Images/greatwall.jpg');" title="Great Wall of China"></div>
+            <div class="tourism-image" style="background-image: url('Images/Taj Mahal.jpg');" title="Taj Mahal, Agra"></div>
+            <div class="tourism-image" style="background-image: url('Images/colosseum.jpg');" title="Colosseum, Rome"></div>
+            <div class="tourism-image" style="background-image: url('Images/machu.jpg');" title="Machu Picchu, Peru"></div>
+            <div class="tourism-image" style="background-image: url('Images/santorini.jpg');" title="Santorini, Greece"></div>
+        </div>
+
+        <div class="form-section">
+            <input type="text" id="imageUrl" placeholder="Enter Image URL" />
+            <input type="text" id="imageTitle" placeholder="Enter Image Title" />
+            <button id="addImageBtn">Add Image</button>
+        </div>
+    </section>
+
+
+    <!-- Booking Section -->
+    <div class="booking-container">
+        <h2>Book Your Trip</h2>
+        <form id="bookingForm">
+            <label for="destination">Select Destination:</label>
+            <select id="destination" name="destination" required>
+                <option value="" disabled selected>Select a destination</option>
+                <option value="Paris">Paris, France</option>
+                <option value="Bali">Bali, Indonesia</option>
+                <option value="New York">New York City, USA</option>
+                <option value="Kyoto">Kyoto, Japan</option>
+            </select>
+
+            <label for="checkin">Check-In Date:</label>
+            <input type="date" id="checkin" name="checkin" required>
+
+            <label for="checkout">Check-Out Date:</label>
+            <input type="date" id="checkout" name="checkout" required>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" max="10" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

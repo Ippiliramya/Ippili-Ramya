@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Your Bike</title>
+    <link rel="stylesheet" href="bikes.css">
+</head>
+<body>
+    <header>
+        <h1>Order Your Bike</h1>
+    </header>
+    
+    <!-- Order Information Section -->
+    <section class="order-form">
+        <h2>Order Information</h2>
+        <form id="orderForm" onsubmit="submitOrder(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="bike-type">Choose Bike Type:</label>
+            <select id="bike-type" name="bike-type" required>
+                <option value="mountain">Mountain Bike</option>
+                <option value="road">Road Bike</option>
+                <option value="hybrid">Hybrid Bike</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <button type="submit">Order Now</button>
+        </form>
+        <div id="order-confirmation"></div>
+    </section>
+
+    <!-- Bike Knowledge Quiz Section -->
+    <section class="quiz">
+        <h2>Bike Knowledge Quiz</h2>
+        <div id="quiz-container">
+            <p id="question"></p>
+            <div id="choices"></div>
+            <button onclick="submitAnswer()">Submit Answer</button>
+        </div>
+        <p id="quiz-result"></p>
+    </section>
+    
+    <!-- Joke API Section -->
+    <section class="joke">
+        <h2>Enjoy a joke while you wait!</h2>
+        <button onclick="fetchJoke()">Get a Joke</button>
+        <div id="joke-info"></div>
+    </section>
+    
+    <script src="bikes.js"></script>
+</body>
+</html>
